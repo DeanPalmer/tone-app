@@ -5,7 +5,7 @@ function loadData(root) {
     fetch(url)
         .then(response => response.json())
         .then(response => {
-                buildList(response);
+            buildList(response);
         });
 }
 
@@ -50,4 +50,21 @@ function createTone(){
   })
   .then(response => {console.log(response)});
 }
+
+function deleteTone(id){
+  let url = root + '/tones';
+  let body = {id: id};
+
+  body = JSON.stringify(body);
+
+  fetch(url, {
+    method: 'delete',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: body
+    })
+    .then(response => {console.log(response)});
+}
+
 loadData(root);
