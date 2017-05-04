@@ -23,5 +23,19 @@
       </div>
       {{/each}}
     </script>
+    <div>
+      <form>
+        <input name="name" type="text" />
+        <select name="type">
+          <option value="0">Guitar</option>
+          <option value="1">Bass</option>
+        </select>
+        <input name="gain" type="number" min="1" max="10" value="1">
+        <input name="bass" type="number" min="1" max="10" value="1">
+        <input name="middle" type="number" min="1" max="10" value="1">
+        <input name="treble" type="number" min="1" max="10" value="1">
+        <button type="button" onclick="createTone()">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
